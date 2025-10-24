@@ -17,10 +17,6 @@
     "androidStatusBar": {
       "hidden": true
     },
-    "androidNavigationBar": {
-      "visible": "false"
-    },
-
    "android": {
       "package": "world.vibz.appbrowser",
       "intentFilters": [
