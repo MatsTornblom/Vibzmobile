@@ -18,7 +18,7 @@
       "hidden": true
     },
    "android": {
-      "package": "world.vibz.appbrowser",
+      "package": "world.vibz.browserapp",
       "intentFilters": [
         {
           "action": "VIEW",
