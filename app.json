@@ -8,10 +8,19 @@
     "scheme": "vibzworld",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.example.browserapp"
     },
+
+    "androidStatusBar": {
+      "hidden": true
+    },
+    "androidNavigationBar": {
+      "visible": false
+    },
+
     "android": {
       "package": "com.example.browserapp",
       "intentFilters": [
@@ -33,14 +42,9 @@
             "DEFAULT"
           ]
         }
-      ],
-      "androidStatusBar": {
-        "hidden": true
-      },
-      "androidNavigationBar": {
-        "visible": false
-      }
+      ]
     },
+
     "web": {
       "bundler": "metro",
       "output": "single",
@@ -59,6 +63,7 @@
       "eas": {
         "projectId": "25e3bfc7-cdb5-4f73-bd69-de8ffb5d2992"
       }
-    }
+    },
+    "owner": "matstblom"
   }
 }
