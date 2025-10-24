@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "bolt-expo-nativewind",
-    "slug": "bolt-expo-nativewind",
+    "name": "Vibz App Browser",
+    "slug": "vibz-app-browser",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -21,8 +21,8 @@
       "visible": false
     },
 
-    "android": {
-      "package": "com.example.browserapp",
+   "android": {
+      "package": "world.vibz.appbrowser",
       "intentFilters": [
         {
           "action": "VIEW",
@@ -30,11 +30,11 @@
           "data": [
             {
               "scheme": "https",
-              "host": "*.example.com"
+              "host": "vibz.world"
             },
             {
-              "scheme": "http",
-              "host": "*.example.com"
+              "scheme": "https",
+              "host": "*.vibz.world"
             }
           ],
           "category": [
@@ -44,7 +44,6 @@
         }
       ]
     },
-
     "web": {
       "bundler": "metro",
       "output": "single",
