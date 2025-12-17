@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+
+# expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+/ios
+/android
+
+# --- EXCEPTION: Commit critical Android XML resource files ---
+# These specific files are required by Android 12+ for backup/data security rules
+# and must be tracked by Git for the EAS build to succeed.
+!/android/app/src/main/res/xml/secure_store_backup_rules.xml
+!/android/app/src/main/res/xml/secure_store_data_extraction_rules.xml
+
+
+
+google-services.json
+
+# native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macos
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+.env
+
+# typescript
+*.tsbuildinfo
