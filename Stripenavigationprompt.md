@@ -2,7 +2,9 @@
 
 Det här är hela konversatione innan utbryting till web browser vid navigeringe till stripe. 
 
-Om deet inte funkar kan det anvndas.
+Om deet inte funkar kan det anvndas som bakgreun.
+
+Förmodligen skulle man då kunna hårdkode an url so sen directiat till stripe. Do skulle man fång att webviewn vill yt till en browser..
 
 Kan tas bort när testts.
 
