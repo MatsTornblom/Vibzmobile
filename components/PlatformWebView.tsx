@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Platform, View, StyleSheet, Text, Alert, Share, Animated, Dimensions, TouchableOpacity } from 'react-native';
+import { Platform, View, StyleSheet, Text, Alert, Share, Animated, Dimensions, TouchableOpacity, Linking } from 'react-native';
 import { WebView, WebViewMessageEvent } from 'react-native-webview';
 import CookieManager from '@react-native-cookies/cookies';
 import { initiateGoogleLogin, clearGoogleSession } from '../utils/googleAuth';
@@ -585,6 +585,20 @@ const PlatformWebView = React.forwardRef<any, PlatformWebViewProps>((props, ref)
         onError={handleError}
         renderError={renderError}
         injectedJavaScript={injectedJavaScript}
+        onShouldStartLoadWithRequest={(request) => {
+          if (request.url.includes('checkout.stripe.com')) {
+            Linking.openURL(request.url).catch(() => {});
+            return false;
+          }
+          return true;
+        }}
+        onNavigationStateChange={(navState) => {
+          if (navState.url.includes('checkout.stripe.com')) {
+            webViewRef.current?.stopLoading();
+            Linking.openURL(navState.url).catch(() => {});
+          }
+          props.onNavigationStateChange?.(navState);
+        }}
       />
     </View>
   );
